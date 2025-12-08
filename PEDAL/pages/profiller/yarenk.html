@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaren K. - Profil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="header">
+            <div class="menu-icon menu-btn">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </div>
+            <div class="logo-container">
+                <img src="logoo.jpg" alt="Pedal Logo" class="logo-icon">
+            </div>
+            <div class="notification-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="black" stroke="black" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                </svg>
+            </div>
+        </header>
+
+
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        <div class="sidebar-menu" id="sidebarMenu">
+            <div class="sidebar-header">
+                <h2>MENU</h2>
+                <button class="close-sidebar" id="closeSidebar">&times;</button>
+            </div>
+            <ul class="category-list">
+                <li><a href="#">Profilim</a></li>
+                <li><a href="#">Bildirimler</a></li>
+                <li><a href="#">Sürüş Geçmişi</a></li>
+                <li><a href="#">Bisikletlerim</a></li>
+                <li><a href="#">Yol Arkadaşım</a></li>
+                <li><a href="../ilan/index.html">İlanlar</a></li>
+            </ul>
+
+            <div class="sidebar-bottom-action">
+                <button id="settingsBtn" class="settings-action-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                        </path>
+                    </svg>
+                    <span>AYARLAR</span>
+                </button>
+            </div>
+        </div>
+
+
+        <section class="profile-info">
+            <div class="avatar-circle">
+                <img src="yaren.jpg" alt="Yaren K." class="profile-avatar-img">
+            </div>
+            <div class="profile-text">
+                <h1>Fatih İNCE.</h1>
+                <p>Çevre dostu ulaşımı destekliyorum!<br>
+                    Bisikletlerimin bakımını düzenli bir şekilde yaparım.<br>
+                    Güvenle kiralayabilir ve sorularınızı sorabilirsiniz.</p>
+            </div>
+        </section>
+
+
+        <div class="card">
+            <h2 class="card-title">Kiralayan Performans İstatistikleri</h2>
+            <div class="stats-container">
+                <div class="stat-box">
+                    <span class="stat-value">15</span>
+                    <span class="stat-label">sürüş</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-value">07</span>
+                    <span class="stat-label">Görüş</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-value">15 <span class="stat-unit">DK</span></span>
+                    <span class="stat-label">Yanıt Süresi</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <h2 class="card-title">Kullanıcı Yorumları</h2>
+            <div class="reviews-container">
+
+                <div class="review-box">
+                    <div class="reviewer-header">
+                        <div class="reviewer-avatar">
+                            <img src="merve_reviewer.jpg" alt="Merve D." class="reviewer-img">
+                        </div>
+                        <span class="reviewer-name">Merve D.</span>
+                    </div>
+                    <p class="review-text">Fatih İNCE çok ilgiliydi bisiklet tam söylendiği gibi bakımlıydı.</p>
+                </div>
+
+                <div class="review-box">
+                    <div class="reviewer-header">
+                        <div class="reviewer-avatar">
+                            <img src="ela.jpg" alt="Ela E." class="reviewer-img">
+                        </div>
+                        <span class="reviewer-name">Ela.E</span>
+                    </div>
+                    <p class="review-text">Bisikletle ilgili mekanik bir sorun yaşadım. Fatih İNCE kısa sürede dönüş
+                        yaptı.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

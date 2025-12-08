@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEDAL - Rol Seçimi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-section">
+            <h1 class="main-title">Pedal’a Hoş Geldiniz!</h1>
+        </div>
+
+        <div class="cards-container">
+            <div class="role-card">
+                <div class="icon-container">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path
+                            d="M5.5 17a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm13 0a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                        <circle cx="15" cy="5" r="1" />
+                        <path d="M12 17h-2.5m2.5 0 6.5-6.5L15 5" />
+                        <path d="M5.5 12 9 5h3" />
+                    </svg>
+                </div>
+                <h3 class="role-title">Kiralayan</h3>
+                <div class="role-subtitle">Bisiklete İhtiyacım Var</div>
+                <p class="role-description">
+                    Yakınımdaki bisikletleri anında bulup kiralamak istiyorum.<br>
+                    Harita üzerinden keşfetmeye hazırım.
+                </p>
+                <button class="btn-select" onclick="window.location.href='../pages/kiralama/index.html'">Kiralamaya
+                    Başla</button>
+            </div>
+
+            <div class="role-card">
+                <div class="icon-container">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path
+                            d="M5.5 17a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm13 0a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                        <path d="M12 17h-2.5m2.5 0 6.5-6.5L15 5" />
+                        <path d="M5.5 12 9 5h3" />
+                        <path d="M16 4h.01" />
+                        <path d="M19 8l-2-2m0 0l-2 2m2-2v6" transform="translate(4, -8) scale(0.8)" />
+                    </svg>
+                </div>
+                <h3 class="role-title">Kiraya Veren</h3>
+                <div class="role-subtitle">Bisikletimle Gelir Elde Et</div>
+                <p class="role-description">
+                    Bisikletimi değerlendirip gelir elde etmek istiyorum.<br>
+                    Uygulama üzerinden paylaşmaya hazırım.
+                </p>
+                <button class="btn-select long-text" onclick="window.location.href='../pages/ilanver/index.html'">İlan
+                    Ver</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

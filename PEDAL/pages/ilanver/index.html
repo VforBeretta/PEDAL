@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PedalApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            <button class="back-btn" onclick="history.back()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 12H5" stroke="#1F2937" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M12 19L5 12L12 5" stroke="#1F2937" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+            <h1>İlan Oluştur</h1>
+        </header>
+
+
+        <form id="createAdForm">
+
+
+            <div class="section">
+                <h2 class="section-title">Bisiklet Fotoğrafları</h2>
+                <div class="photo-grid">
+                    <div class="photo-upload-box active">
+                        <input type="file" accept="image/*" hidden>
+                        <button type="button" class="add-photo-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 5V19" stroke="#4B5563" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M5 12H19" stroke="#4B5563" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span class="btn-text">Fotoğraf Ekle</span>
+                        </button>
+                    </div>
+                    <div class="photo-placeholder"></div>
+                    <div class="photo-placeholder"></div>
+                    <div class="photo-placeholder"></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Temel Bisiklet Bilgileri</h2>
+                <div class="form-group">
+                    <input type="text" placeholder="Marka" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Model" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" placeholder="Tür , Kadro Boyu , Yaş" class="form-input">
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Kira Açıklaması</h2>
+                <div class="form-group">
+                    <textarea placeholder="Bisikletin durumunu ve varsa ek özelliklerini belirtin."
+                        class="form-input textarea" rows="4"></textarea>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Kiralama Ücreti</h2>
+                <div class="price-row">
+                    <div class="form-group">
+                        <input type="number" id="hourlyPrice" placeholder="Saatlik Ücret" class="form-input"
+                            inputmode="numeric">
+                    </div>
+                    <div class="divider"></div>
+                    <div class="form-group">
+                        <input type="number" id="dailyPrice" placeholder="Günlük Ücret"
+                            class="form-input readonly-input" readonly>
+                    </div>
+                </div>
+                <p class="helper-text">Günlük fiyat, saatlik ücretten otomatik hesaplanır.</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Teslim Alma Konumu</h2>
+                <div class="location-input-wrapper">
+                    <input type="text" placeholder="Adres Detayı" class="form-input location-input">
+                    <div class="map-icon-area" id="openMapBtn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+                                stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M12 21C16 17 20 13 20 10C20 5.58172 16.4183 2 12 2C7.58172 2 4 5.58172 4 10C4 13 8 17 12 21Z"
+                                stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+                <p class="helper-text">Konumu doğru işaretlediğinizden emin olun.</p>
+            </div>
+
+            <div class="footer-action">
+                <button type="submit" class="submit-btn">İlanı Oluştur ve Yayına Al</button>
+            </div>
+        </form>
+    </div>
+
+
+    <div id="mapModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Konum Seç</h2>
+            <div class="map-placeholder-large">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10000!2d28.9784!3d41.0082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sIstanbul!5e0!3m2!1sen!2str!4v1620000000000!5m2!1sen!2str"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+            <button type="button" class="confirm-location-btn">Bu Konumu Seç</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

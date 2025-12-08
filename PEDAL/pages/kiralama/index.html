@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEDAL</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+
+        <div class="map-section">
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192698.552130768!2d28.87175248231923!3d41.00532148782352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2zIsSwc3RhbmJ1bA!5e0!3m2!1str!2str!4v1716922200000!5m2!1str!2str"
+                class="map-iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+
+            <div class="route-info-card">
+                <div class="route-stat">
+                    <div class="icon-clock">
+
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <span>20 dk</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="route-stat">
+                    <span>4,5 km</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content-section">
+            <h1 class="section-title">Yakındaki Bisikletler</h1>
+
+            <div class="bike-list">
+
+                <div class="bike-card">
+                    <div class="bike-image-container">
+                        <img src="red_bianchi_bike_1765056774880.png" alt="Bianchi Bike" class="bike-img">
+                    </div>
+                    <div class="bike-details">
+                        <div class="bike-info-top">
+                            <h3 class="bike-name">Bianchi</h3>
+                            <div class="price-badge">
+                                25 ₺/Saat
+                            </div>
+                        </div>
+                        <div class="bike-info-bottom">
+                            <span class="distance">300m</span>
+                            <span class="range">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" class="range-icon">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg>
+                                85m
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="bike-card">
+                    <div class="bike-image-container">
+                        <img src="blue_voltbike_1765056787450.png" alt="VoltBike" class="bike-img">
+                    </div>
+                    <div class="bike-details">
+                        <div class="bike-info-top">
+                            <h3 class="bike-name">VoltBike</h3>
+                            <div class="price-badge">
+                                60 ₺/Saat
+                            </div>
+                        </div>
+                        <div class="bike-info-bottom">
+                            <span class="distance">555m</span>
+                            <span class="range">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" class="range-icon">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg>
+                                65 km
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="bike-card">
+                    <div class="bike-image-container">
+                        <img src="green_gofold_bike_v2_1765062827821.png" alt="GoFold" class="bike-img">
+                    </div>
+                    <div class="bike-details">
+                        <div class="bike-info-top">
+                            <h3 class="bike-name">GoFold</h3>
+                            <div class="price-badge">
+                                45 ₺/Saat
+                            </div>
+                        </div>
+                        <div class="bike-info-bottom">
+                            <span class="distance">700m</span>
+                            <span class="range">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" class="range-icon">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg>
+                                1.2 km
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay" id="overlay"></div>
+
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Menü</h2>
+                <button class="close-btn" id="close-sidebar">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="../kiralama/index.html">Ana Menü</a></li>
+                <li><a href="../profiller/digerprofiller/ebruince.html">Profilim</a></li>
+                <li><a href="../profiller/yarenk.html">Yol Arkadaşım</a></li>
+                <li><a href="#">Bildirimler</a></li>
+                <li><a href="#">Sürüş Geçmişi</a></li>
+                <li><a href="#">Bisikletlerim</a></li>
+                <li><a href="../ilanlar/index.html">Favori İlanlarım</a></li>
+                <li><a href="../sss/index.html">Soru/Cevap</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="#">Ayarlar</a>
+            </div>
+        </div>
+
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item active">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Harita</span>
+            </a>
+            <a href="#" class="nav-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="5.5" cy="17.5" r="3.5" />
+                    <circle cx="18.5" cy="17.5" r="3.5" />
+                    <path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-3 11.5V14l-3-3 4-3 2 3h2" />
+                </svg>
+                <span>Bisikletler</span>
+            </a>
+            <a href="#" class="nav-item" id="menu-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <span>Menü</span>
+            </a>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

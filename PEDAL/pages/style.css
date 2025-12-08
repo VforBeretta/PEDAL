@@ -1,0 +1,160 @@
+:root {
+    --bg-color: #daeeb5;
+    --page-bg: #f5f5f5;
+    --card-bg: #ffffff;
+    --text-dark: #1a4228;
+    --text-grey: #4A4A4A;
+    --btn-green: #8bc34a;
+    --btn-hover: #7cb342;
+    --font-main: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--page-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 414px;
+    height: 100vh;
+    max-height: auto;
+    background-color: var(--bg-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    position: relative;
+    border-radius: 0;
+}
+
+@media (min-width: 415px) {
+    .container {
+        border-radius: 30px;
+        height: 90vh;
+    }
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+    flex-shrink: 0;
+}
+
+.main-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #445D48;
+    margin-bottom: 1rem;
+}
+
+.sub-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #444;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.role-card {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    padding: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.icon-container {
+    margin-bottom: 1rem;
+    color: #7CB342;
+}
+
+.icon-container svg {
+    width: 70px;
+    height: 70px;
+}
+
+.role-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 0.8rem;
+}
+
+.role-subtitle {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.role-description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #444;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.btn-select {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--btn-green);
+    color: #333;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-select:hover {
+    background-color: var(--btn-hover);
+}
+
+.btn-select.long-text {
+    font-size: 0.9rem;
+    padding: 0.8rem 1rem;
+}
+
+@media (max-width: 375px) {
+    .main-title {
+        font-size: 1.7rem;
+    }
+
+    .role-card {
+        padding: 1.25rem;
+    }
+}

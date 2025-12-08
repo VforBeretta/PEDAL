@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <button class="back-btn" onclick="history.back()" aria-label="Geri">
+            <svg width="24" height="24" border="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 12H5" stroke="#0099DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12 19L5 12L12 5" stroke="#0099DD" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+
+        <img src="../assets/text logo.png" alt="Pedal Logo" class="logo">
+        <h1 class="page-title">Giriş Yap</h1>
+        <form>
+            <div class="input-group">
+                <span class="icon user-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                            stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M22 6L12 13L2 6" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </span>
+                <input type="email" id="login-email" placeholder="E-posta Adresi" required>
+            </div>
+
+            <div class="input-group">
+                <span class="icon lock-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z" />
+                    </svg>
+                </span>
+                <input type="password" id="login-password" placeholder="Şifre" required>
+            </div>
+
+            <div class="options-row">
+                <label class="checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="label-text">Beni Hatırla</span>
+                </label>
+                <a href="#" class="forgot-password">Şifremi Unuttum?</a>
+            </div>
+
+            <div class="divider"></div>
+
+            <button type="submit" class="submit-btn" id="loginBtn">Giriş Yap</button>
+        </form>
+        <div class="footer">
+            Hesabın yok mu? <a href="#" class="register-link" onclick="window.location.href='signup.html'">Kayıt ol</a>
+        </div>
+    </div>
+    <script src="db.js"></script>
+    <script src="login.js"></script>
+</body>
+
+</html>
